@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Role extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
-      'name', 'desc'  
+      'name', 'desc'
     ];
-    
+
     protected function belongsToUser(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
         return $this->belongsToMany(User::class);

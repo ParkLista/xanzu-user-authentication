@@ -24,6 +24,7 @@ return new class extends Migration
             $table->boolean('telephone_verified')->nullable()->defaut(false);
             $table->timestamp('telephone_verified_at')->nullable();
             $table->timestamp('email_verified_at')->nullable();
+            $table->timestamp('deleted_at', $precision = 0)->nullable();
             $table->string('password');
             $table->unsignedBigInteger('role')->nullable();
             $table->rememberToken();
